@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#070b17">
+
+    <title>Volet for Individuals and Businesses: A Practical Guide</title>
+    <meta name="description"
+        content="Learn how Volet connects fiat, stablecoins, cards, crypto payments, conversion, and automated payouts for individuals, developers, and online businesses.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+        content="Volet Beyond the Wallet: A Practical Guide for Users and Businesses">
+    <meta property="og:description"
+        content="A practical analysis of how Volet connects fiat, stablecoins, cards, payment acceptance, conversion, and automated payouts.">
+    <meta property="og:image" content="volet.jpg">
+    <meta property="og:image:alt"
+        content="Volet connecting fiat currencies, stablecoin networks, banking rails, digital wallets, payment APIs, businesses, and automated payouts">
+    <meta property="article:section" content="Fintech">
+    <meta property="article:tag" content="Volet">
+    <meta property="article:tag" content="Cryptocurrency">
+    <meta property="article:tag" content="Fintech">
+    <meta property="article:tag" content="Web3">
+    <meta property="article:tag" content="Payments">
+    <meta property="article:tag" content="API">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="Volet Beyond the Wallet: A Practical Guide">
+    <meta name="twitter:description"
+        content="How Volet works for individuals, freelancers, developers, marketplaces, and businesses moving between fiat and crypto.">
+    <meta name="twitter:image" content="volet.jpg">
+    <meta name="twitter:image:alt"
+        content="Volet connecting users and businesses across fiat, stablecoin, banking, blockchain, API, and payout infrastructure">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Volet Beyond the Wallet: A Practical Guide for Users and Businesses",
+        "description": "Learn how Volet connects fiat, stablecoins, cards, crypto payments, conversion, and automated payouts for individuals, developers, and online businesses.",
+        "articleSection": "Fintech",
+        "keywords": [
+            "Volet",
+            "Volet wallet",
+            "Volet payments",
+            "stablecoins",
+            "USDT",
+            "USDC",
+            "crypto payments",
+            "crypto payouts",
+            "payment infrastructure",
+            "payment orchestration",
+            "hosted checkout",
+            "mass payouts",
+            "custodial payments",
+            "non-custodial payments"
+        ],
+        "inLanguage": "en"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Volet used for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Volet is used to receive, hold, exchange, send, and withdraw supported fiat currencies, stablecoins, and cryptocurrencies. Businesses can also use Volet for crypto payment acceptance, settlement, business balances, and automated payouts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Volet be used to receive USDT?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Volet supports USDT through currently supported blockchain networks. Users must confirm that the sender's selected network matches a network supported by Volet before transferring funds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can businesses accept crypto payments with Volet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Businesses can accept supported crypto and stablecoin payments using options such as hosted checkout, supported plugins, or API integration. Volet also documents a non-custodial flow for businesses that want funds delivered directly to their own wallets."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Volet support crypto payouts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Volet supports payouts to Volet accounts and external crypto wallets, depending on the chosen model and currency. Its mass payout tools can be used for contractor payments, affiliate commissions, creator earnings, and marketplace withdrawals."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Volet convert crypto into fiat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Volet supports exchange between selected fiat currencies, stablecoins, and cryptocurrencies. Whether the resulting fiat balance can be withdrawn through a specific bank or card route depends on the user's country, verification status, currency, and available product."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Volet available in every country?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No financial product should be assumed to be available in every country. Volet account access, cards, payment methods, withdrawals, and business services are subject to geographic, compliance, and product-specific restrictions; US users and businesses should verify current eligibility directly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Volet custodial or non-custodial?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Volet supports both architectures for merchant use. Custodial payments settle into a Volet account, while supported non-custodial payments move funds directly on-chain to a merchant-controlled wallet through smart-contract infrastructure."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #070b17;
+            --bg-elevated: #0b1122;
+            --surface: rgba(17, 25, 48, 0.78);
+            --surface-solid: #10182d;
+            --surface-soft: rgba(25, 36, 68, 0.5);
+            --text: #edf3ff;
+            --text-soft: #bcc8dc;
+            --muted: #8796b1;
+            --line: rgba(164, 190, 230, 0.15);
+            --line-strong: rgba(118, 218, 255, 0.3);
+            --cyan: #72dcff;
+            --blue: #6b91ff;
+            --purple: #ad8cff;
+            --lime: #c7fa35;
+            --success: #7be7bd;
+            --code: #080d19;
+            --max-page: 1280px;
+            --reading: 760px;
+            --radius: 18px;
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 92px;
+        }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            background:
+                radial-gradient(circle at 15% 0%,
+                    rgba(70, 110, 220, 0.13), transparent 31rem),
+                radial-gradient(circle at 88% 16%,
+                    rgba(153, 94, 235, 0.1), transparent 28rem),
+                var(--bg);
+            color: var(--text);
+            font-family:
+                Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+            font-size: 17px;
+            line-height: 1.78;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--cyan);
+            text-decoration-color: rgba(114, 220, 255, 0.42);
+            text-underline-offset: 0.2em;
+            transition:
+                color 160ms ease,
+                text-decoration-color 160ms ease;
+        }
+
+        a:hover {
+            color: #b7efff;
+            text-decoration-color: currentColor;
+        }
+
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 3px solid var(--lime);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 100;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: var(--lime);
+            color: #09100f;
+            font-weight: 800;
+            transform: translateY(-160%);
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid var(--line);
+            background: rgba(7, 11, 23, 0.84);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .nav-inner {
+            width: min(calc(100% - 40px), var(--max-page));
+            min-height: 68px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .wordmark {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .wordmark-mark {
+            width: 13px;
+            height: 13px;
+            border-radius: 4px;
+            background: var(--lime);
+            box-shadow: 0 0 0 5px rgba(199, 250, 53, 0.08);
+            transform: rotate(45deg);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            font-size: 0.84rem;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            color: var(--text-soft);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            width: min(calc(100% - 40px), var(--max-page));
+            margin: 0 auto;
+            padding: clamp(64px, 9vw, 118px) 0 62px;
+        }
+
+        .hero-copy {
+            max-width: 970px;
+            margin-bottom: 42px;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0 0 24px;
+            color: var(--cyan);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .kicker::before {
+            width: 28px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            content: "";
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+            color: #f6f9ff;
+            line-height: 1.17;
+            letter-spacing: -0.035em;
+            text-wrap: balance;
+        }
+
+        h1 {
+            max-width: 1030px;
+            margin-bottom: 24px;
+            font-size: clamp(2.75rem, 6.5vw, 5.8rem);
+            line-height: 0.99;
+        }
+
+        .hero-deck {
+            max-width: 850px;
+            margin: 0;
+            color: var(--text-soft);
+            font-size: clamp(1.08rem, 2vw, 1.32rem);
+            line-height: 1.65;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            margin-top: 28px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-meta span::before {
+            width: 5px;
+            height: 5px;
+            border-radius: 999px;
+            background: var(--purple);
+            content: "";
+        }
+
+        .hero-figure {
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid var(--line-strong);
+            border-radius: clamp(18px, 3vw, 28px);
+            background: #060a15;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-figure::before {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            border-radius: inherit;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+            content: "";
+        }
+
+        .hero-figure img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .page-grid {
+            width: min(calc(100% - 40px), 1120px);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, var(--reading)) 250px;
+            gap: 84px;
+            align-items: start;
+        }
+
+        main {
+            min-width: 0;
+        }
+
+        .toc {
+            position: sticky;
+            top: 96px;
+            padding: 20px 18px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: rgba(12, 18, 36, 0.68);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .toc-title {
+            margin: 0 0 13px;
+            color: var(--text);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .toc ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .toc li + li {
+            margin-top: 7px;
+        }
+
+        .toc a {
+            display: block;
+            padding: 3px 0;
+            color: var(--muted);
+            font-size: 0.78rem;
+            line-height: 1.42;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: var(--cyan);
+        }
+
+        article > section {
+            padding-top: 26px;
+            margin-bottom: 62px;
+        }
+
+        article > section:first-child {
+            padding-top: 0;
+        }
+
+        .lead p:first-child {
+            margin-top: 0;
+            color: #dce6f7;
+            font-size: 1.14rem;
+            line-height: 1.78;
+        }
+
+        p {
+            margin: 0 0 1.35em;
+        }
+
+        h2 {
+            position: relative;
+            margin-bottom: 26px;
+            padding-top: 6px;
+            font-size: clamp(1.85rem, 4vw, 2.65rem);
+        }
+
+        h2::before {
+            display: block;
+            width: 54px;
+            height: 3px;
+            margin-bottom: 18px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            content: "";
+        }
+
+        h3 {
+            margin: 42px 0 18px;
+            font-size: clamp(1.24rem, 2.3vw, 1.55rem);
+            letter-spacing: -0.022em;
+        }
+
+        strong {
+            color: #f7faff;
+            font-weight: 760;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 1.5em;
+            padding-left: 1.35em;
+        }
+
+        li {
+            padding-left: 0.35em;
+        }
+
+        li + li {
+            margin-top: 0.42em;
+        }
+
+        li::marker {
+            color: var(--cyan);
+            font-weight: 800;
+        }
+
+        .takeaways {
+            padding: clamp(24px, 5vw, 36px);
+            border: 1px solid var(--line-strong);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(135deg, rgba(55, 116, 205, 0.13),
+                    rgba(137, 82, 204, 0.07)),
+                var(--surface);
+            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
+        }
+
+        .takeaways h2 {
+            font-size: clamp(1.55rem, 3.5vw, 2rem);
+        }
+
+        .takeaways ul {
+            margin-bottom: 0;
+        }
+
+        .definition {
+            margin: 28px 0;
+            padding: 20px 22px;
+            border-left: 3px solid var(--cyan);
+            border-radius: 0 14px 14px 0;
+            background: var(--surface-soft);
+            color: #d8e3f5;
+        }
+
+        .definition p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scenario {
+            margin: 26px 0 32px;
+            padding: 22px 24px;
+            border: 1px solid rgba(173, 140, 255, 0.22);
+            border-radius: 15px;
+            background: rgba(125, 90, 205, 0.07);
+        }
+
+        .scenario-label {
+            display: block;
+            margin-bottom: 9px;
+            color: var(--purple);
+            font-size: 0.72rem;
+            font-weight: 850;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .scenario p:last-child,
+        .scenario ol:last-child,
+        .scenario ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .table-wrap {
+            width: 100%;
+            margin: 30px 0;
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            background: var(--surface);
+            box-shadow: 0 12px 42px rgba(0, 0, 0, 0.14);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 620px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.91rem;
+            line-height: 1.55;
+        }
+
+        th,
+        td {
+            padding: 15px 17px;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top;
+        }
+
+        th {
+            color: #f5f8ff;
+            background: rgba(90, 126, 205, 0.13);
+            font-size: 0.78rem;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+        }
+
+        td {
+            color: var(--text-soft);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:hover {
+            background: rgba(114, 220, 255, 0.035);
+        }
+
+        code {
+            border: 1px solid rgba(114, 220, 255, 0.13);
+            border-radius: 5px;
+            background: rgba(114, 220, 255, 0.07);
+            color: #bceeff;
+            font-family:
+                "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.84em;
+        }
+
+        :not(pre) > code {
+            padding: 0.14em 0.38em;
+        }
+
+        .code-label {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 30px 0 0;
+            padding: 10px 15px;
+            border: 1px solid var(--line);
+            border-bottom: 0;
+            border-radius: 14px 14px 0 0;
+            background: #0e1629;
+            color: var(--muted);
+            font-size: 0.73rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        pre {
+            max-width: 100%;
+            margin: 0 0 30px;
+            padding: 22px;
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 0 0 14px 14px;
+            background: var(--code);
+            color: #d8e8ff;
+            font-size: 0.84rem;
+            line-height: 1.7;
+            tab-size: 4;
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+        }
+
+        pre code {
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        .formula {
+            margin: 26px 0;
+            padding: 20px 22px;
+            border: 1px solid rgba(123, 231, 189, 0.24);
+            border-radius: 14px;
+            background: rgba(38, 147, 113, 0.07);
+            color: var(--success);
+            font-size: 1.03rem;
+            text-align: center;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 13px;
+        }
+
+        .faq-item {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            background: var(--surface);
+        }
+
+        .faq-item summary {
+            padding: 19px 22px;
+            color: #f1f6ff;
+            cursor: pointer;
+            font-weight: 760;
+            line-height: 1.45;
+        }
+
+        .faq-item summary::marker {
+            color: var(--cyan);
+        }
+
+        .faq-answer {
+            padding: 0 22px 20px;
+            color: var(--text-soft);
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .related-reading {
+            margin-top: 50px;
+            padding: 26px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--surface);
+        }
+
+        .related-reading h3 {
+            margin-top: 0;
+        }
+
+        .related-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .related-links a {
+            display: block;
+            padding: 15px 17px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.018);
+            text-decoration: none;
+        }
+
+        .related-links a:hover {
+            border-color: var(--line-strong);
+            background: rgba(114, 220, 255, 0.04);
+        }
+
+        .referral-card {
+            position: relative;
+            margin: 28px 0 0;
+            overflow: hidden;
+            padding: clamp(25px, 5vw, 36px);
+            border: 1px solid rgba(199, 250, 53, 0.3);
+            border-radius: var(--radius);
+            background:
+                radial-gradient(circle at 100% 0%,
+                    rgba(199, 250, 53, 0.11), transparent 18rem),
+                var(--surface-solid);
+        }
+
+        .referral-card h3 {
+            margin-top: 0;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            margin: 5px 0 20px;
+            padding: 10px 18px;
+            border-radius: 11px;
+            background: var(--lime);
+            color: #09100d;
+            font-size: 0.9rem;
+            font-weight: 850;
+            text-decoration: none;
+        }
+
+        .cta-link:hover {
+            background: #d6ff61;
+            color: #09100d;
+        }
+
+        .disclosure {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.82rem;
+            line-height: 1.6;
+        }
+
+        .site-footer {
+            width: min(calc(100% - 40px), var(--max-page));
+            margin: 88px auto 0;
+            padding: 30px 0 46px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 14px 28px;
+        }
+
+        .footer-inner p {
+            margin: 0;
+        }
+
+        @media (max-width: 1000px) {
+            .page-grid {
+                grid-template-columns: minmax(0, var(--reading));
+                justify-content: center;
+            }
+
+            .toc {
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            body {
+                font-size: 16px;
+                line-height: 1.72;
+            }
+
+            .nav-inner,
+            .hero,
+            .page-grid,
+            .site-footer {
+                width: min(calc(100% - 28px), var(--max-page));
+            }
+
+            .nav-links a:not(:last-child) {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 52px;
+            }
+
+            .hero-copy {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: clamp(2.35rem, 12vw, 3.8rem);
+            }
+
+            article > section {
+                margin-bottom: 47px;
+            }
+
+            .takeaways,
+            .scenario,
+            .related-reading,
+            .referral-card {
+                padding: 21px;
+            }
+
+            th,
+            td {
+                padding: 13px 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+
+        @media print {
+            :root {
+                --bg: #fff;
+                --text: #111827;
+                --text-soft: #334155;
+                --muted: #64748b;
+                --line: #dbe3ed;
+            }
+
+            body {
+                background: #fff;
+                color: var(--text);
+            }
+
+            .site-header,
+            .toc {
+                display: none;
+            }
+
+            .hero,
+            .page-grid {
+                width: 100%;
+            }
+
+            .page-grid {
+                display: block;
+            }
+
+            h1,
+            h2,
+            h3,
+            strong {
+                color: #111827;
+            }
+
+            .takeaways,
+            .scenario,
+            .definition,
+            .related-reading,
+            .referral-card,
+            .faq-item {
+                background: #fff;
+                box-shadow: none;
+            }
+
+            a {
+                color: #075985;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#article-content">Skip to article</a>
+
+    <header class="site-header">
+        <nav class="nav-inner" aria-label="Primary navigation">
+            <a class="wordmark" href="#top" aria-label="Return to article top">
+                <span class="wordmark-mark" aria-hidden="true"></span>
+                <span>Fintech Field Notes</span>
+            </a>
+            <div class="nav-links">
+                <a href="#individuals">Individuals</a>
+                <a href="#business-infrastructure">Businesses</a>
+                <a href="#developers">Developers</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="top"></div>
+
+    <header class="hero">
+        <div class="hero-copy">
+            <p class="kicker">Fintech · Web3 · Payments</p>
+            <h1>Volet Beyond the Wallet: A Practical Guide for Users and Businesses</h1>
+            <p class="hero-deck">
+                How Volet connects fiat, stablecoins, cards, crypto payments,
+                conversion, settlement, and automated payouts for individuals,
+                developers, and online businesses.
+            </p>
+            <div class="hero-meta" aria-label="Article topics">
+                <span>Long-form analysis</span>
+                <span>Individual and business use cases</span>
+                <span>Payment infrastructure</span>
+            </div>
+        </div>
+
+        <figure class="hero-figure">
+            <img src="volet.jpg"
+                alt="Volet connecting fiat currencies, stablecoin networks, traditional banking rails, digital wallets, merchant payments, APIs, businesses, and automated payouts"
+                width="1024" height="612" fetchpriority="high">
+        </figure>
+    </header>
+
+    <div class="page-grid">
+        <main id="article-content">
+            <article>
+                <section class="lead" aria-label="Introduction">
+                    <p>
+                        A freelancer receives USDT from a client but needs EUR to
+                        pay rent. An online store wants to accept USDC without
+                        running blockchain infrastructure. A marketplace must
+                        distribute earnings to thousands of sellers. A company
+                        has fiat revenue but contractors who prefer stablecoins.
+                        A Web3 project wants customer payments to arrive directly
+                        in a treasury wallet.
+                    </p>
+
+                    <p>
+                        These situations appear to involve different products: a
+                        crypto wallet, an exchange, a payment gateway, a banking
+                        service, a card, and a payout provider.
+                    </p>
+
+                    <p>
+                        In practice, they are variations of the same problem:
+                        <strong>moving value between people, businesses,
+                        currencies, and financial networks</strong>.
+                    </p>
+
+                    <p>
+                        That is the most useful way to evaluate Volet. Volet is
+                        most interesting when you stop looking at it as just a
+                        crypto wallet and start looking at it as a bridge between
+                        users, businesses, fiat currencies, stablecoins,
+                        blockchain networks, cards, payment acceptance, and
+                        payouts.
+                    </p>
+
+                    <p>
+                        This does not mean Volet is the right answer for every
+                        transaction. Its value depends on geography, the assets
+                        involved, the chosen payment rail, custody requirements,
+                        integration complexity, and total cost. But for people
+                        and companies that regularly move between traditional
+                        money and crypto, the platform covers a broader workflow
+                        than a basic digital wallet.
+                    </p>
+                </section>
+
+                <section id="key-takeaways" class="takeaways">
+                    <h2>Key Takeaways</h2>
+                    <ul>
+                        <li>
+                            <strong>Volet is a multi-currency digital wallet and
+                            payments platform</strong> supporting fiat balances,
+                            cryptocurrencies, stablecoins, conversion, payment
+                            acceptance, and payouts.
+                        </li>
+                        <li>
+                            Individuals can use Volet to receive money, hold
+                            supported assets, convert between fiat and crypto,
+                            send funds, withdraw through available methods, and
+                            use eligible card products.
+                        </li>
+                        <li>
+                            Businesses can use Volet for crypto payment
+                            acceptance, settlement, business balances, contractor
+                            payments, affiliate payouts, and marketplace
+                            withdrawals.
+                        </li>
+                        <li>
+                            Hosted checkout offers a simpler route to payment
+                            acceptance, while the Volet API provides more control
+                            and automation.
+                        </li>
+                        <li>
+                            Volet supports both custodial and non-custodial
+                            payment models, but the operational responsibilities
+                            differ significantly.
+                        </li>
+                        <li>
+                            The meaningful cost is the price of the entire
+                            transaction path, not a single advertised processing
+                            fee.
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="financial-boundaries">
+                    <h2>The Real Problem Is Crossing Financial Boundaries</h2>
+
+                    <p>
+                        Sending money within one system is usually
+                        straightforward. Complexity appears when a transaction
+                        crosses boundaries.
+                    </p>
+
+                    <p>A payment may need to cross:</p>
+
+                    <ul>
+                        <li>From a customer to a merchant</li>
+                        <li>From one country to another</li>
+                        <li>From fiat to crypto</li>
+                        <li>From crypto to fiat</li>
+                        <li>From one blockchain network to another</li>
+                        <li>From a business balance to thousands of recipients</li>
+                        <li>From an online balance to a card or bank account</li>
+                        <li>From a custodial account to an external wallet</li>
+                    </ul>
+
+                    <p>
+                        A conventional bank account solves some of these
+                        transitions. A self-custody wallet solves others. An
+                        exchange can convert assets, while a payment gateway can
+                        accept customer funds. A payout platform can handle bulk
+                        distributions.
+                    </p>
+
+                    <p>
+                        Using a separate provider for every stage can work, but it
+                        creates operational fragmentation. Funds may become
+                        spread across multiple dashboards, and each provider may
+                        have different fees, verification requirements,
+                        transaction references, settlement times, and
+                        reconciliation formats.
+                    </p>
+
+                    <aside class="definition" aria-label="Payment orchestration definition">
+                        <p>
+                            <strong>Payment orchestration</strong> is the
+                            coordination of multiple payment methods, currencies,
+                            providers, and settlement routes as one operational
+                            workflow.
+                        </p>
+                    </aside>
+
+                    <p>
+                        Volet can serve as a payment orchestration layer for
+                        certain fiat and crypto flows. It does not remove every
+                        boundary, but it can reduce the number of disconnected
+                        systems required to cross them.
+                    </p>
+
+                    <p>
+                        According to its current official materials, Volet
+                        supports personal and business accounts, fiat and crypto
+                        balances, payment tools, currency exchange, withdrawals,
+                        cards in eligible regions, and mass payouts. Exact
+                        availability depends on the account type, country,
+                        currency, and product.
+                    </p>
+                </section>
+
+                <section id="individuals">
+                    <h2>How Volet Works for Individuals</h2>
+
+                    <p>
+                        For an individual, the Volet wallet is a place to
+                        receive, hold, exchange, send, and withdraw supported
+                        currencies and digital assets.
+                    </p>
+
+                    <p>
+                        The current published product and pricing pages list USD
+                        and EUR wallet balances alongside USDT, USDC, BTC, ETH,
+                        XRP, SOL, TON, TRX, LTC, and other supported assets. The
+                        precise list of tokens and blockchain networks can
+                        change, so users should verify the intended asset and
+                        network before transferring funds.
+                    </p>
+
+                    <p>The personal workflow generally has five stages:</p>
+
+                    <ol>
+                        <li>Receive or deposit money.</li>
+                        <li>
+                            Hold it in a supported fiat, stablecoin, or
+                            cryptocurrency balance.
+                        </li>
+                        <li>Convert it if necessary.</li>
+                        <li>Send, withdraw, or transfer it.</li>
+                        <li>
+                            Spend through an available Volet card product, where
+                            eligible.
+                        </li>
+                    </ol>
+
+                    <p>
+                        That combination is particularly relevant to freelancers,
+                        remote workers, creators, and crypto users whose income
+                        and expenses do not use the same currency.
+                    </p>
+
+                    <h3>A freelancer paid in USDT who needs EUR</h3>
+
+                    <div class="scenario">
+                        <span class="scenario-label">Practical scenario</span>
+                        <p>
+                            Consider a freelance developer in Europe whose
+                            overseas client pays invoices in USDT.
+                        </p>
+
+                        <p>
+                            The developer is not necessarily investing in
+                            cryptocurrency. USDT may simply be the client's
+                            preferred settlement method for international
+                            payments.
+                        </p>
+                    </div>
+
+                    <p>A possible Volet workflow is:</p>
+
+                    <ol>
+                        <li>
+                            The freelancer receives USDT through a supported
+                            deposit route.
+                        </li>
+                        <li>
+                            The USDT appears in the appropriate Volet balance.
+                        </li>
+                        <li>
+                            The freelancer keeps part of the payment in USDT for
+                            future international expenses.
+                        </li>
+                        <li>
+                            The remaining amount is converted toward EUR.
+                        </li>
+                        <li>
+                            The EUR is withdrawn through an available banking
+                            method or used through an eligible card product.
+                        </li>
+                    </ol>
+
+                    <p>
+                        The practical benefit is optionality. The freelancer does
+                        not have to choose immediately between keeping everything
+                        as crypto and converting everything to fiat.
+                    </p>
+
+                    <p>
+                        The limitations are equally important. Conversion has a
+                        cost, withdrawal methods vary by country, and the
+                        receiving network must match a network supported by
+                        Volet. The freelancer should compare the full route with
+                        alternatives such as a bank, exchange, or specialist
+                        remittance provider.
+                    </p>
+
+                    <h3>Receiving money from different sources</h3>
+
+                    <p>
+                        A Volet user may receive funds from several types of
+                        counterparties:
+                    </p>
+
+                    <ul>
+                        <li>Another Volet user</li>
+                        <li>A platform that supports Volet payouts</li>
+                        <li>An employer or client paying stablecoins</li>
+                        <li>An external cryptocurrency wallet</li>
+                        <li>An available fiat funding route</li>
+                    </ul>
+
+                    <p>
+                        The value is not merely having several deposit buttons.
+                        It is being able to manage the resulting balances within
+                        one account.
+                    </p>
+
+                    <p>
+                        For example, a creator might receive USDC from a
+                        sponsorship platform, EUR from a client, and USDT from an
+                        affiliate network. The creator can decide separately
+                        whether to hold, convert, transfer, or withdraw each
+                        balance.
+                    </p>
+
+                    <h3>What stablecoins contribute</h3>
+
+                    <aside class="definition" aria-label="Stablecoin definition">
+                        <p>
+                            A <strong>stablecoin</strong> is a blockchain-based
+                            token designed to track the value of another asset,
+                            most commonly a fiat currency such as the US dollar.
+                        </p>
+                    </aside>
+
+                    <p>
+                        USDT and USDC are often used for payments because their
+                        value is generally more stable than assets such as BTC or
+                        ETH. They can still carry issuer, liquidity, depegging,
+                        regulatory, and blockchain risks, so “stable” should not
+                        be interpreted as risk-free.
+                    </p>
+
+                    <p>
+                        Volet supports stablecoin balances and multiple supported
+                        networks. Its documentation describes unified balances
+                        for supported stablecoins, meaning a user may be able to
+                        receive a supported stablecoin on one network and later
+                        withdraw it using another supported network without
+                        manually operating a blockchain bridge.
+                    </p>
+
+                    <p>
+                        That can simplify network management, but it does not
+                        remove the need for caution. Sending an external
+                        transaction through an unsupported or incorrect network
+                        can lead to delayed or unrecoverable funds.
+                    </p>
+
+                    <h3>Converting crypto into money that can be used</h3>
+
+                    <p>
+                        Crypto ownership and practical spending power are not the
+                        same thing.
+                    </p>
+
+                    <p>A user may need to transform a digital asset into:</p>
+
+                    <ul>
+                        <li>A EUR or USD balance</li>
+                        <li>A bank withdrawal</li>
+                        <li>A card balance</li>
+                        <li>
+                            A stablecoin with lower short-term volatility
+                        </li>
+                        <li>A different cryptocurrency</li>
+                        <li>A transfer to another Volet user</li>
+                    </ul>
+
+                    <p>
+                        Volet connects several of these stages. That can be more
+                        convenient than depositing crypto to an exchange, trading
+                        it, withdrawing fiat elsewhere, and then loading a
+                        separate spending product.
+                    </p>
+
+                    <p>
+                        However, the shortest workflow is not automatically the
+                        least expensive one. Conversion rates, card-loading
+                        costs, blockchain fees, and withdrawal fees all affect
+                        the outcome.
+                    </p>
+
+                    <h3>Cards are regional products, not universal features</h3>
+
+                    <p>
+                        Volet currently publishes several card offerings for
+                        different regions. Depending on eligibility, these
+                        products can turn an account balance into something
+                        usable for ordinary card payments.
+                    </p>
+
+                    <p>
+                        This can help a user move from crypto income to everyday
+                        spending without manually withdrawing every payment to a
+                        bank first.
+                    </p>
+
+                    <p>
+                        Card support must be evaluated separately from wallet
+                        support. A person may be eligible for a Volet account but
+                        not for a particular physical or virtual card. Card
+                        network, currency, pricing, limits, and geographic
+                        availability vary by product.
+                    </p>
+
+                    <p>
+                        Before relying on a card, users should check the current
+                        <a href="https://volet.com/cards">Volet card pages</a>,
+                        fees, delivery rules, and country requirements.
+                    </p>
+                </section>
+
+                <section id="business-infrastructure">
+                    <h2>Where Volet Becomes Business Infrastructure</h2>
+
+                    <p>
+                        The individual view asks, “How can I receive and use my
+                        money?”
+                    </p>
+
+                    <p>
+                        The business view asks a different set of questions:
+                    </p>
+
+                    <ul>
+                        <li>How can customers pay?</li>
+                        <li>Where will the revenue settle?</li>
+                        <li>
+                            Can settlement currency differ from payment currency?
+                        </li>
+                        <li>
+                            How can funds be paid to contractors or sellers?
+                        </li>
+                        <li>Can payments and payouts be automated?</li>
+                        <li>Who holds the money while it moves?</li>
+                        <li>
+                            How will finance reconcile provider transactions with
+                            internal records?
+                        </li>
+                    </ul>
+
+                    <p>
+                        Volet Business addresses these questions through merchant
+                        payment acceptance, business balances, conversion,
+                        withdrawals, and payout tools.
+                    </p>
+
+                    <p>The distinction matters:</p>
+
+                    <div class="table-wrap" role="region"
+                        aria-label="Individual use compared with business use"
+                        tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Individual use</th>
+                                    <th scope="col">Business use</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Receive personal payments</td>
+                                    <td>Accept customer payments</td>
+                                </tr>
+                                <tr>
+                                    <td>Hold fiat or crypto balances</td>
+                                    <td>
+                                        Manage operating and settlement balances
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Convert assets</td>
+                                    <td>
+                                        Choose or automate settlement currency
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Send money to another person</td>
+                                    <td>
+                                        Pay contractors, affiliates, creators, or
+                                        sellers
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Withdraw or use an eligible card
+                                    </td>
+                                    <td>
+                                        Integrate payment and payout workflows
+                                        through an API
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Manage personal cash flow</td>
+                                    <td>
+                                        Reconcile transactions against orders and
+                                        internal ledgers
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        A Volet business account does not replace the company's
+                        financial system. The business still owns pricing,
+                        customer records, entitlements, seller balances, tax
+                        records, payout approvals, fraud controls, and
+                        accounting.
+                    </p>
+
+                    <p>
+                        Volet provides money-movement infrastructure. It does not
+                        become the merchant's source of truth.
+                    </p>
+                </section>
+
+                <section id="accepting-stablecoins">
+                    <h2>Accepting USDT and USDC Without Building a Gateway</h2>
+
+                    <p>
+                        An online store that wants to accept USDT or USDC faces
+                        more work than displaying a wallet address.
+                    </p>
+
+                    <p>
+                        At even moderate volume, the store needs to determine:
+                    </p>
+
+                    <ul>
+                        <li>Which payment belongs to which order</li>
+                        <li>
+                            Which blockchain and token the customer selected
+                        </li>
+                        <li>Whether the amount is correct</li>
+                        <li>
+                            Whether the transaction is sufficiently complete
+                        </li>
+                        <li>Whether the checkout session expired</li>
+                        <li>What to do with late or duplicate events</li>
+                        <li>
+                            Which currency the merchant ultimately wants to hold
+                        </li>
+                        <li>
+                            How each provider transaction maps to internal
+                            records
+                        </li>
+                    </ul>
+
+                    <aside class="definition"
+                        aria-label="Crypto payment gateway definition">
+                        <p>
+                            A <strong>crypto payment gateway</strong> is
+                            infrastructure that helps a merchant create payment
+                            requests, collect supported cryptocurrency payments,
+                            track their status, and settle the resulting funds.
+                        </p>
+                    </aside>
+
+                    <p>
+                        Volet offers custodial crypto payment acceptance through
+                        hosted checkout, plugins, and API integration. Its
+                        documentation also describes a non-custodial option for
+                        direct on-chain payments.
+                    </p>
+
+                    <h3>Example: an online store accepting USDT and USDC</h3>
+
+                    <div class="scenario">
+                        <span class="scenario-label">Commerce workflow</span>
+                        <p>
+                            Suppose an online store sells software licenses
+                            globally. Customers have begun requesting payment in
+                            USDT and USDC.
+                        </p>
+                    </div>
+
+                    <p>With a hosted checkout flow, the store could:</p>
+
+                    <ol>
+                        <li>Create an order in its own database.</li>
+                        <li>
+                            Create a corresponding payment request.
+                        </li>
+                        <li>
+                            Redirect the customer to a Volet-hosted checkout
+                            page.
+                        </li>
+                        <li>
+                            Let the customer choose an available payment option.
+                        </li>
+                        <li>
+                            Wait for an authoritative payment result.
+                        </li>
+                        <li>
+                            Mark the order as paid and issue the license.
+                        </li>
+                        <li>
+                            Settle into a supported Volet fiat, stablecoin, or
+                            crypto balance.
+                        </li>
+                    </ol>
+
+                    <p>
+                        The merchant does not need to build every customer-facing
+                        blockchain interaction itself. It still needs to
+                        integrate the payment result correctly and maintain an
+                        auditable order state.
+                    </p>
+
+                    <p>
+                        Volet's official documentation makes an important
+                        distinction: <strong>Volet is not traditional card
+                        acquiring</strong>. A merchant should not assume that
+                        Volet places a standard Visa or Mastercard payment form
+                        directly on the merchant's website.
+                    </p>
+
+                    <p>
+                        Customers may fund their own Volet accounts through
+                        available fiat methods and then pay from their Volet
+                        balances, but that is different from direct card
+                        acquiring.
+                    </p>
+
+                    <h3>Hosted checkout or API integration?</h3>
+
+                    <aside class="definition"
+                        aria-label="Hosted checkout and payment API definitions">
+                        <p>
+                            A <strong>hosted checkout</strong> sends the customer
+                            to a payment page managed by the provider. It is
+                            useful for teams that want to launch quickly and
+                            avoid building a complete crypto payment interface.
+                        </p>
+                        <p>
+                            A <strong>payment API integration</strong> gives the
+                            merchant more control over how payment creation,
+                            status tracking, customer experience, and internal
+                            records fit into the product.
+                        </p>
+                    </aside>
+
+                    <div class="table-wrap" role="region"
+                        aria-label="Payment integration approach comparison"
+                        tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Approach</th>
+                                    <th scope="col">Best suited to</th>
+                                    <th scope="col">Main trade-off</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hosted checkout</td>
+                                    <td>
+                                        Stores, SaaS products, and teams testing
+                                        crypto demand
+                                    </td>
+                                    <td>
+                                        Less control over the checkout experience
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CMS plugin</td>
+                                    <td>
+                                        Businesses using a supported ecommerce
+                                        platform
+                                    </td>
+                                    <td>
+                                        Dependent on plugin compatibility and
+                                        maintenance
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>API integration</td>
+                                    <td>
+                                        Marketplaces and products with embedded
+                                        payment logic
+                                    </td>
+                                    <td>
+                                        More engineering and operational
+                                        responsibility
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Non-custodial integration</td>
+                                    <td>
+                                        Web3 businesses requiring direct wallet
+                                        settlement
+                                    </td>
+                                    <td>
+                                        Greater smart-contract and
+                                        wallet-management responsibility
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        Hosted checkout is not inherently less professional than
+                        a custom API integration. If crypto is only one optional
+                        payment method, keeping the specialized interface at the
+                        provider can be the more maintainable design.
+                    </p>
+
+                    <p>
+                        A custom integration makes more sense when deposits,
+                        payment states, customer balances, or settlement options
+                        are core parts of the product.
+                    </p>
+                </section>
+
+                <section id="payouts">
+                    <h2>Payouts Turn Collection Infrastructure Around</h2>
+
+                    <p>
+                        Payment acceptance moves money into a business. Payout
+                        infrastructure moves it back out to recipients.
+                    </p>
+
+                    <aside class="definition" aria-label="Crypto payout definition">
+                        <p>
+                            <strong>Crypto payouts</strong> are
+                            business-initiated transfers of cryptocurrencies or
+                            stablecoins to recipients, usually through platform
+                            accounts or external blockchain wallets.
+                        </p>
+                    </aside>
+
+                    <p>Volet's mass payout tools are relevant to:</p>
+
+                    <ul>
+                        <li>Affiliate networks paying commissions</li>
+                        <li>Creator platforms distributing earnings</li>
+                        <li>Marketplaces processing seller withdrawals</li>
+                        <li>SaaS businesses paying referral rewards</li>
+                        <li>Companies paying international contractors</li>
+                        <li>Web3 projects distributing on-chain incentives</li>
+                    </ul>
+
+                    <h3>Example: paying thousands of affiliates or creators</h3>
+
+                    <div class="scenario">
+                        <span class="scenario-label">Mass payout workflow</span>
+                        <p>
+                            Imagine an affiliate platform with 8,000 eligible
+                            recipients at the end of the month.
+                        </p>
+
+                        <p>
+                            The platform's application calculates commission
+                            balances, applies fraud checks, enforces minimum
+                            payout thresholds, and determines which recipients
+                            are eligible. Volet can then be used as the execution
+                            layer for supported payouts.
+                        </p>
+                    </div>
+
+                    <p>A responsible workflow would look like this:</p>
+
+                    <ol>
+                        <li>Freeze the approved payout period.</li>
+                        <li>
+                            Calculate each recipient's payable amount.
+                        </li>
+                        <li>
+                            Validate destination details and selected networks.
+                        </li>
+                        <li>Create an immutable payout batch.</li>
+                        <li>
+                            Submit approved payouts through the selected
+                            integration.
+                        </li>
+                        <li>Track each transfer asynchronously.</li>
+                        <li>
+                            Reconcile completed, pending, and failed items.
+                        </li>
+                        <li>
+                            Return failed payouts to an exception queue rather
+                            than silently resending them.
+                        </li>
+                    </ol>
+
+                    <p>
+                        The platform still needs its own ledger. A successful API
+                        request does not prove that every recipient has received
+                        funds, and a failed response does not always prove that
+                        no transfer occurred.
+                    </p>
+
+                    <p>
+                        Mass payouts reduce execution work, but they do not
+                        replace payout governance.
+                    </p>
+
+                    <h3>Example: funding in fiat and paying contractors in stablecoins</h3>
+
+                    <div class="scenario">
+                        <span class="scenario-label">International contractor payments</span>
+                        <p>
+                            Consider a software company that earns revenue in
+                            fiat while its international contractors prefer USDT.
+                        </p>
+                    </div>
+
+                    <p>
+                        According to Volet's mass payout documentation, a
+                        custodial business can fund a supported Volet balance and
+                        create payouts to Volet accounts or external crypto
+                        wallets. Automatic conversion may be available when the
+                        source balance and payout asset differ.
+                    </p>
+
+                    <p>The workflow could be:</p>
+
+                    <ol>
+                        <li>
+                            The company funds its Volet business account using an
+                            available fiat route.
+                        </li>
+                        <li>
+                            Finance approves a contractor payout batch.
+                        </li>
+                        <li>
+                            The application specifies supported stablecoin
+                            destinations.
+                        </li>
+                        <li>
+                            Volet converts funds where applicable and executes
+                            the payouts.
+                        </li>
+                        <li>
+                            The company reconciles provider references and final
+                            statuses against its payroll or accounts-payable
+                            records.
+                        </li>
+                    </ol>
+
+                    <p>
+                        This can be more practical than asking every contractor
+                        to use the same local bank rail. It also means the
+                        company must collect correct wallet addresses, record
+                        network choices, account for conversion costs, and
+                        confirm that stablecoin compensation is legally and
+                        operationally appropriate.
+                    </p>
+                </section>
+
+                <section id="custody">
+                    <h2>Custodial and Non-Custodial Flows Solve Different Problems</h2>
+
+                    <p>
+                        The custody model determines who controls the funds while
+                        a payment is processed.
+                    </p>
+
+                    <aside class="definition"
+                        aria-label="Custodial and non-custodial payment definitions">
+                        <p>
+                            A <strong>custodial payment</strong> is a payment in
+                            which a provider receives or holds funds within an
+                            account-based system before the merchant withdraws,
+                            converts, or redistributes them.
+                        </p>
+                        <p>
+                            A <strong>non-custodial payment</strong> sends funds
+                            directly on-chain to a wallet controlled by the
+                            merchant. The payment provider supplies
+                            infrastructure, but it does not hold the settled
+                            funds in a platform balance.
+                        </p>
+                    </aside>
+
+                    <p>Volet documents both models.</p>
+
+                    <div class="table-wrap" role="region"
+                        aria-label="Custodial and non-custodial flow comparison"
+                        tabindex="0">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Custodial flow</th>
+                                    <th scope="col">Non-custodial flow</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Where does settlement arrive?</td>
+                                    <td>A Volet account balance</td>
+                                    <td>
+                                        The merchant's own blockchain wallet
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Can platform conversion be part of the
+                                        flow?
+                                    </td>
+                                    <td>Available for supported routes</td>
+                                    <td>Generally handled separately</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Who controls the destination wallet keys?
+                                    </td>
+                                    <td>Volet controls platform custody</td>
+                                    <td>The merchant controls its wallet keys</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Can account-based fiat rails be combined
+                                        easily?
+                                    </td>
+                                    <td>More naturally</td>
+                                    <td>
+                                        Not within the direct on-chain settlement
+                                        itself
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Who carries key-management
+                                        responsibility?
+                                    </td>
+                                    <td>
+                                        Primarily the provider for the platform
+                                        account
+                                    </td>
+                                    <td>The merchant</td>
+                                </tr>
+                                <tr>
+                                    <td>Best fit</td>
+                                    <td>
+                                        Businesses prioritizing multi-currency
+                                        operations and conversion
+                                    </td>
+                                    <td>
+                                        Web3 businesses prioritizing direct
+                                        on-chain control
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>When custodial settlement makes sense</h3>
+
+                    <p>
+                        Custodial Volet payments can make sense when a business
+                        wants to:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Receive several supported currencies in one account
+                        </li>
+                        <li>Convert revenue before withdrawal</li>
+                        <li>Use the same balance for later payouts</li>
+                        <li>Reduce direct hot-wallet management</li>
+                        <li>
+                            Combine crypto receipts with available fiat routes
+                        </li>
+                        <li>
+                            Maintain unified supported stablecoin balances across
+                            networks
+                        </li>
+                    </ul>
+
+                    <p>
+                        The main limitation is provider dependency. Account
+                        access, verification, service availability, withdrawal
+                        options, and operational continuity all matter because
+                        funds are settled within the provider's system.
+                    </p>
+
+                    <h3>When non-custodial payments make sense</h3>
+
+                    <p>
+                        A Web3 business may prefer funds to arrive directly in a
+                        treasury wallet.
+                    </p>
+
+                    <p>
+                        Volet's non-custodial payment documentation describes
+                        direct on-chain flows through smart contracts. Neither
+                        the merchant nor the customer necessarily needs a Volet
+                        account for this type of payment.
+                    </p>
+
+                    <p>That architecture can suit:</p>
+
+                    <ul>
+                        <li>Protocols with on-chain treasuries</li>
+                        <li>Decentralized applications</li>
+                        <li>Token-based communities</li>
+                        <li>
+                            Businesses with formal self-custody policies
+                        </li>
+                        <li>
+                            Services that do not want customer revenue held in a
+                            provider balance
+                        </li>
+                    </ul>
+
+                    <p>
+                        The trade-off is responsibility. The business must secure
+                        private keys, define signer policies, monitor contracts,
+                        maintain enough native assets for relevant network
+                        operations, and build robust on-chain accounting.
+                    </p>
+
+                    <p>
+                        Non-custodial does not mean maintenance-free. It means the
+                        custody burden moves to the merchant.
+                    </p>
+                </section>
+
+                <section id="developers">
+                    <h2>What Developers Still Need to Build</h2>
+
+                    <p>
+                        A Volet API integration can automate payment requests and
+                        payouts, but the application must retain an independent
+                        model of what should happen.
+                    </p>
+
+                    <p>At minimum, developers should separate three layers:</p>
+
+                    <ul>
+                        <li>
+                            <strong>Business state:</strong> orders, invoices,
+                            commissions, seller balances, and payout eligibility
+                        </li>
+                        <li>
+                            <strong>Provider state:</strong> payment or payout
+                            references and current processing information
+                        </li>
+                        <li>
+                            <strong>Financial state:</strong> ledger entries,
+                            fees, conversion results, and settled amounts
+                        </li>
+                    </ul>
+
+                    <h3>Internal order and ledger state</h3>
+
+                    <p>
+                        Provider-specific transaction terminology should not
+                        spread throughout the application.
+                    </p>
+
+                    <p>
+                        A merchant might define internal states such as:
+                    </p>
+
+                    <ul>
+                        <li><code>created</code></li>
+                        <li><code>awaiting_payment</code></li>
+                        <li><code>processing</code></li>
+                        <li><code>settled</code></li>
+                        <li><code>expired</code></li>
+                        <li><code>failed</code></li>
+                        <li><code>refunded</code></li>
+                    </ul>
+
+                    <p>
+                        These are examples of application states, not actual
+                        Volet API status names. The integration layer should map
+                        current provider responses into the merchant's stable
+                        internal model.
+                    </p>
+
+                    <p>The same principle applies to payouts:</p>
+
+                    <ul>
+                        <li><code>approved</code></li>
+                        <li><code>submitted</code></li>
+                        <li><code>processing</code></li>
+                        <li><code>completed</code></li>
+                        <li><code>failed</code></li>
+                        <li><code>review_required</code></li>
+                    </ul>
+
+                    <h3>Asynchronous processing</h3>
+
+                    <p>
+                        Payments and blockchain transfers do not always complete
+                        during the original HTTP request.
+                    </p>
+
+                    <p>The application should assume that:</p>
+
+                    <ul>
+                        <li>A customer may close the checkout page.</li>
+                        <li>A redirect may never reach the merchant.</li>
+                        <li>A notification may arrive more than once.</li>
+                        <li>A blockchain payment may remain pending.</li>
+                        <li>
+                            A payout may be accepted for processing and fail
+                            later.
+                        </li>
+                        <li>
+                            A timeout may leave the final result uncertain.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Fulfillment and balance updates should therefore depend
+                        on authoritative server-side information, not a browser
+                        success page.
+                    </p>
+
+                    <h3>Idempotency</h3>
+
+                    <aside class="definition" aria-label="Idempotency definition">
+                        <p>
+                            <strong>Idempotency</strong> means that repeating the
+                            same operation produces no additional financial
+                            effect after the first successful execution.
+                        </p>
+                    </aside>
+
+                    <p>
+                        If a payment notification is delivered twice, the
+                        merchant must not ship twice. If a payout submission is
+                        retried after a timeout, the platform must not pay the
+                        contractor twice.
+                    </p>
+
+                    <p>
+                        The exact idempotency mechanism must follow Volet's
+                        current API documentation. Independently of provider
+                        support, the merchant should enforce uniqueness in its
+                        own database.
+                    </p>
+
+                    <p>
+                        The following is provider-neutral pseudocode, not Volet
+                        API code:
+                    </p>
+
+                    <div class="code-label">
+                        <span>Provider-neutral pseudocode</span>
+                        <span>Not Volet API code</span>
+                    </div>
+                    <pre><code>begin transaction
+
+event = find_or_create_event(provider_reference)
+
+if event.already_processed:
+    return success
+
+payment = lock_internal_payment(event.internal_payment_id)
+
+if provider_result_is_final_and_successful(event):
+    if payment.state != "settled":
+        add_ledger_entry(payment)
+        mark_order_paid(payment.order_id)
+        payment.state = "settled"
+
+event.already_processed = true
+
+commit transaction</code></pre>
+
+                    <h3>Reconciliation and provider references</h3>
+
+                    <aside class="definition" aria-label="Reconciliation definition">
+                        <p>
+                            <strong>Reconciliation</strong> is the process of
+                            comparing internal financial records with provider
+                            records, wallet activity, bank activity, and actual
+                            balances.
+                        </p>
+                    </aside>
+
+                    <p>Every integration should store:</p>
+
+                    <ul>
+                        <li>An internal order or payout ID</li>
+                        <li>The provider's transaction reference</li>
+                        <li>Requested and settled currencies</li>
+                        <li>Requested and settled amounts</li>
+                        <li>Relevant fees</li>
+                        <li>Conversion information</li>
+                        <li>
+                            Destination details in an appropriately protected
+                            form
+                        </li>
+                        <li>Timestamps and final outcome</li>
+                        <li>
+                            The blockchain transaction hash when applicable
+                        </li>
+                    </ul>
+
+                    <p>
+                        A daily reconciliation process should find discrepancies
+                        such as:
+                    </p>
+
+                    <ul>
+                        <li>
+                            A provider payment with no internal order
+                        </li>
+                        <li>
+                            An order marked paid without matching settlement
+                        </li>
+                        <li>
+                            A completed payout missing from the internal ledger
+                        </li>
+                        <li>A duplicate provider event</li>
+                        <li>A conversion difference</li>
+                        <li>A withdrawal still awaiting confirmation</li>
+                    </ul>
+
+                    <p>
+                        Volet can orchestrate payments, but it does not replace a
+                        company's internal accounting, ledger, compliance, tax,
+                        or fraud systems.
+                    </p>
+                </section>
+
+                <section id="fees">
+                    <h2>Fees Make Sense Only as a Complete Route</h2>
+
+                    <p>
+                        A processing fee is only one component of the cost.
+                    </p>
+
+                    <p>
+                        For a transaction that enters as crypto, converts into
+                        fiat, and leaves through a bank route, the practical
+                        calculation is:
+                    </p>
+
+                    <p class="formula">
+                        <strong>Total cost = processing fee + conversion cost +
+                        network fee + withdrawal fee</strong>
+                    </p>
+
+                    <p>
+                        The route may also create indirect costs, such as
+                        foreign-exchange spread, minimum fees, or the operational
+                        cost of handling failed transfers.
+                    </p>
+
+                    <p>
+                        According to Volet's published pricing at the time of
+                        writing, stablecoin and crypto payment processing and
+                        mass payouts can start from 0.25%, while transfers
+                        involving Volet accounts can start from different rates.
+                        The personal and business fee pages also publish separate
+                        charges for card funding, bank withdrawals, crypto
+                        withdrawals, and certain auto-conversion routes.
+                    </p>
+
+                    <p>
+                        These are starting prices and examples, not universal
+                        quotes. The final amount can depend on volume, currency,
+                        blockchain network, withdrawal method, card product,
+                        account type, and region.
+                    </p>
+
+                    <p>
+                        Consider the freelancer receiving USDT and withdrawing
+                        EUR. The freelancer should compare at least:
+                    </p>
+
+                    <ol>
+                        <li>The cost of receiving the USDT</li>
+                        <li>
+                            The cost or rate used to convert USDT toward EUR
+                        </li>
+                        <li>The EUR withdrawal fee</li>
+                        <li>
+                            Any fixed fee that disproportionately affects a small
+                            payment
+                        </li>
+                    </ol>
+
+                    <p>
+                        A route with a low percentage fee may still be expensive
+                        for a small transaction if it includes a fixed withdrawal
+                        charge.
+                    </p>
+
+                    <p>
+                        A business should perform the same analysis at workflow
+                        level. If revenue enters as USDC and leaves as USDT
+                        payouts, the relevant cost is not simply the checkout
+                        fee. Conversion and payout execution also matter.
+                    </p>
+
+                    <p>
+                        The current
+                        <a href="https://volet.com/personal/fees">personal fee schedule</a>
+                        and
+                        <a href="https://volet.com/business/fees">business fee schedule</a>
+                        should be checked immediately before implementation or
+                        use.
+                    </p>
+                </section>
+
+                <section id="availability">
+                    <h2>Availability, Compliance, and Operational Limits</h2>
+
+                    <p>
+                        The broadest product description is not necessarily the
+                        product available to a particular user.
+                    </p>
+
+                    <h3>Country and card availability</h3>
+
+                    <p>
+                        Account eligibility, funding methods, bank withdrawals,
+                        cards, and business services may vary by country.
+                    </p>
+
+                    <p>
+                        Prospective US users and US-connected businesses should
+                        pay particular attention to the current eligibility rules
+                        and official terms rather than assuming that global
+                        availability includes the United States. Restrictions
+                        can change, so current confirmation from Volet is more
+                        reliable than older reviews or screenshots.
+                    </p>
+
+                    <p>
+                        Card access is also region-specific. An account may be
+                        available where a particular card program is not.
+                    </p>
+
+                    <h3>Verification and merchant review</h3>
+
+                    <p>
+                        Custodial financial services generally require identity
+                        or business verification.
+                    </p>
+
+                    <p>
+                        Volet's payment gateway documentation states that
+                        verified accounts are required for custodial payment
+                        tools and that new custodial gateways undergo a
+                        compliance review before activation. A business should
+                        complete eligibility and onboarding discussions before
+                        committing engineering resources.
+                    </p>
+
+                    <p>
+                        A technically valid integration is not a substitute for
+                        merchant approval.
+                    </p>
+
+                    <h3>External blockchain transfers are unforgiving</h3>
+
+                    <p>
+                        A correct wallet address on the wrong network may still
+                        be unusable.
+                    </p>
+
+                    <p>Applications should clearly display:</p>
+
+                    <ul>
+                        <li>Asset</li>
+                        <li>Blockchain network</li>
+                        <li>Destination address</li>
+                        <li>Any required memo or tag</li>
+                        <li>Expected amount</li>
+                        <li>
+                            Who pays the network or processing fee
+                        </li>
+                    </ul>
+
+                    <p>
+                        For business payouts, destination validation should
+                        happen before a payout enters the approved batch.
+                        High-risk or newly changed addresses may justify
+                        additional review.
+                    </p>
+
+                    <h3>Custody creates dependency</h3>
+
+                    <p>
+                        Custodial accounts reduce key-management work, but they
+                        create dependency on the provider's account controls,
+                        availability, supported routes, and compliance decisions.
+                    </p>
+
+                    <p>Businesses should define:</p>
+
+                    <ul>
+                        <li>Who can access the account</li>
+                        <li>Who can approve payouts</li>
+                        <li>How credentials are rotated</li>
+                        <li>How balances are monitored</li>
+                        <li>
+                            What happens during provider downtime
+                        </li>
+                        <li>
+                            How much operating capital should remain with the
+                            provider
+                        </li>
+                        <li>
+                            Which backup payment and payout routes exist
+                        </li>
+                    </ul>
+
+                    <h3>Non-custodial systems create a different burden</h3>
+
+                    <p>
+                        Direct wallet settlement reduces provider custody but
+                        increases the merchant's security obligations.
+                    </p>
+
+                    <p>
+                        A non-custodial business needs key protection, access
+                        controls, transaction-signing policies, smart-contract
+                        review, on-chain monitoring, incident response, and
+                        recovery procedures.
+                    </p>
+
+                    <p>
+                        Neither model removes risk. Each places risk in a
+                        different part of the architecture.
+                    </p>
+                </section>
+
+                <section id="fit">
+                    <h2>When Volet Is a Good Fit—and When It Is Not</h2>
+
+                    <p>
+                        Volet makes the most sense when a workflow repeatedly
+                        crosses fiat, stablecoin, crypto, payment, and payout
+                        boundaries.
+                    </p>
+
+                    <p>Strong use cases include:</p>
+
+                    <ul>
+                        <li>
+                            A freelancer receiving USDT or USDC and periodically
+                            converting to fiat
+                        </li>
+                        <li>
+                            A creator managing payments from several
+                            international sources
+                        </li>
+                        <li>
+                            A crypto user who wants a route from digital assets
+                            to eligible card spending
+                        </li>
+                        <li>
+                            An online store adding stablecoin payments
+                        </li>
+                        <li>
+                            A marketplace paying sellers to external wallets
+                        </li>
+                        <li>
+                            An affiliate network running mass payouts
+                        </li>
+                        <li>
+                            A company funding in fiat and paying global
+                            contractors in stablecoins
+                        </li>
+                        <li>
+                            A Web3 business comparing custodial settlement with
+                            direct wallet settlement
+                        </li>
+                    </ul>
+
+                    <p>Volet may be less suitable when:</p>
+
+                    <ul>
+                        <li>A user needs only a local bank account</li>
+                        <li>
+                            A merchant needs conventional direct card acquiring
+                            as its main payment method
+                        </li>
+                        <li>
+                            The required country, currency, network, card, or
+                            withdrawal route is unavailable
+                        </li>
+                        <li>
+                            A business requires a fully self-hosted payment stack
+                        </li>
+                        <li>
+                            A regulated company needs a specialist provider for
+                            its jurisdiction or industry
+                        </li>
+                        <li>
+                            A merchant wants one provider to replace accounting,
+                            tax, fraud, and compliance systems
+                        </li>
+                        <li>
+                            A self-custody user does not want any custodial
+                            account exposure
+                        </li>
+                        <li>
+                            The complete Volet transaction path is more expensive
+                            than a simpler alternative
+                        </li>
+                    </ul>
+
+                    <h3>Practical verdict</h3>
+
+                    <p>
+                        Volet is not merely a place to store cryptocurrency. It
+                        is a multi-currency digital wallet and payment
+                        infrastructure platform connecting selected fiat
+                        balances, stablecoins, blockchain assets, cards,
+                        checkout, conversion, settlement, and payouts.
+                    </p>
+
+                    <p>
+                        For individuals, the value is being able to receive money
+                        in one form and use it in another.
+                    </p>
+
+                    <p>
+                        For businesses, the value is being able to accept,
+                        convert, hold, and distribute funds without assembling
+                        every payment rail independently.
+                    </p>
+
+                    <p>
+                        The strongest reason to use Volet is not that it offers
+                        one unique financial action. It is that several related
+                        actions can be combined into one workflow.
+                    </p>
+
+                    <p>
+                        The strongest reason not to use it is equally practical:
+                        if eligibility, custody, pricing, or a required payment
+                        rail does not fit the workflow, a specialist bank,
+                        exchange, card acquirer, self-custody stack, or payout
+                        provider may be more appropriate.
+                    </p>
+                </section>
+
+                <section id="faq">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <div class="faq-list">
+                        <details class="faq-item" open>
+                            <summary>What is Volet used for?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Volet is used to receive, hold, exchange,
+                                    send, and withdraw supported fiat currencies,
+                                    stablecoins, and cryptocurrencies. Businesses
+                                    can also use Volet for crypto payment
+                                    acceptance, settlement, business balances,
+                                    and automated payouts.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can Volet be used to receive USDT?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes, Volet supports USDT through currently
+                                    supported blockchain networks. Users must
+                                    confirm that the sender's selected network
+                                    matches a network supported by Volet before
+                                    transferring funds.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                Can businesses accept crypto payments with
+                                Volet?
+                            </summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes. Businesses can accept supported crypto
+                                    and stablecoin payments using options such as
+                                    hosted checkout, supported plugins, or API
+                                    integration. Volet also documents a
+                                    non-custodial flow for businesses that want
+                                    funds delivered directly to their own
+                                    wallets.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Does Volet support crypto payouts?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes. Volet supports payouts to Volet accounts
+                                    and external crypto wallets, depending on the
+                                    chosen model and currency. Its mass payout
+                                    tools can be used for contractor payments,
+                                    affiliate commissions, creator earnings, and
+                                    marketplace withdrawals.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can Volet convert crypto into fiat?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Volet supports exchange between selected fiat
+                                    currencies, stablecoins, and
+                                    cryptocurrencies. Whether the resulting fiat
+                                    balance can be withdrawn through a specific
+                                    bank or card route depends on the user's
+                                    country, verification status, currency, and
+                                    available product.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Is Volet available in every country?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    No financial product should be assumed to be
+                                    available in every country. Volet account
+                                    access, cards, payment methods, withdrawals,
+                                    and business services are subject to
+                                    geographic, compliance, and product-specific
+                                    restrictions; US users and businesses should
+                                    verify current eligibility directly.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Is Volet custodial or non-custodial?</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    Volet supports both architectures for
+                                    merchant use. Custodial payments settle into
+                                    a Volet account, while supported
+                                    non-custodial payments move funds directly
+                                    on-chain to a merchant-controlled wallet
+                                    through smart-contract infrastructure.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section id="conclusion">
+                    <h2>Volet as a Bridge Between Money Systems</h2>
+
+                    <p>
+                        Volet is most useful when the real task is not simply
+                        holding crypto but moving money across systems: from USDT
+                        to EUR, from a customer wallet to a business balance,
+                        from fiat revenue to contractor payouts, or from online
+                        earnings to everyday spending.
+                    </p>
+
+                    <p>
+                        That breadth is also why evaluation must happen at
+                        workflow level. Check eligibility, supported assets,
+                        network compatibility, custody requirements, operational
+                        controls, and the complete transaction cost before
+                        deciding whether Volet is the right bridge.
+                    </p>
+
+                    <aside class="related-reading" aria-labelledby="related-title">
+                        <h3 id="related-title">Complementary reading</h3>
+                        <div class="related-links">
+                            <a href="https://medium.com/@deborah.millington/volet-explained-what-you-can-actually-use-it-for-3cbaf34b0bb1?source=friends_link&amp;sk=9a3c3fb28f567684f110809734373cc4">
+                                For a practical account-holder perspective, read
+                                the Volet guide on Medium.
+                            </a>
+                            <a href="https://dev.to/deborahmillington/building-payment-workflows-with-volet-i0o">
+                                For a deeper look at engineering payment
+                                workflows, see the developer-focused Volet guide
+                                on DEV Community.
+                            </a>
+                        </div>
+                    </aside>
+
+                    <aside class="referral-card" aria-labelledby="referral-title">
+                        <h3 id="referral-title">Interested in trying Volet?</h3>
+                        <p>
+                            You can explore the platform and create an account
+                            using the link below.
+                        </p>
+                        <a class="cta-link" href="REFERRAL_LINK">
+                            Get started with Volet
+                        </a>
+                        <p class="disclosure">
+                            <strong>Disclosure:</strong> The link above is a
+                            referral link. If you register or use eligible
+                            services through it, the author may receive a
+                            referral benefit at no additional cost to you.
+                        </p>
+                    </aside>
+                </section>
+            </article>
+        </main>
+
+        <aside class="toc" aria-label="Table of contents">
+            <p class="toc-title">In this article</p>
+            <ol>
+                <li><a href="#key-takeaways">Key takeaways</a></li>
+                <li>
+                    <a href="#financial-boundaries">
+                        Crossing financial boundaries
+                    </a>
+                </li>
+                <li><a href="#individuals">Volet for individuals</a></li>
+                <li>
+                    <a href="#business-infrastructure">
+                        Business infrastructure
+                    </a>
+                </li>
+                <li>
+                    <a href="#accepting-stablecoins">
+                        Accepting USDT and USDC
+                    </a>
+                </li>
+                <li><a href="#payouts">Mass payouts</a></li>
+                <li>
+                    <a href="#custody">Custodial vs non-custodial</a>
+                </li>
+                <li><a href="#developers">Developer considerations</a></li>
+                <li><a href="#fees">Fees and transaction routes</a></li>
+                <li>
+                    <a href="#availability">Availability and compliance</a>
+                </li>
+                <li><a href="#fit">Who Volet fits</a></li>
+                <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>
+                Independent analysis of Volet for personal and business payment
+                workflows.
+            </p>
+            <p>
+                Product availability, pricing, networks, and eligibility may
+                change.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
